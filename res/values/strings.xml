@@ -20,7 +20,6 @@
     <string name="miku_settings_summary">The Secret I have always dreamed of</string>
     <string name="device_part_title">Device Settings</string>
 
-    <string name="mubb_settings_title">MUBB Settings</string>
     <string name="mumc_title">🎵 Miku UI Music Center</string>
 
     <!-- Media notification -->
@@ -30,7 +29,6 @@
     <string name="artwork_media_background_enable_blur_title">Blur media media artwork background</string>
     <string name="artwork_media_background_blur_radius_title">Blur amount for media artwork</string>
     <string name="artwork_media_background_alpha_title">Transparency of media artwork</string>
-    <string name="lyricsstub_settings_title">Miku UI Lyrics Stub</string>
 
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>

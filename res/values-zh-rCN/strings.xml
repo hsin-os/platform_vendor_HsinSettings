@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2021 Miku UI
+     Copyright (C) 2026 Hsin OS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,14 +17,14 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="miku_settings_title">MikuのSecret</string>
-    <string name="miku_settings_summary">Secret 在梦中出现 的秘密</string>
+    <string name="hsin_settings_title">✦ 圣域秘藏</string>
+    <string name="hsin_settings_summary">圣域之中珍藏的秘密与专属定制</string>
     <string name="device_part_title">专属设置</string>
 
-    <string name="mumc_title">🎵 Miku UI 音乐中心</string>
+    <string name="hsmc_title">🎵 Hsin OS 音乐中心</string>
 
     <!-- Media notification -->
-    <string name="artwork_media_title">🎼 Miku 音乐通知栏</string>
+    <string name="artwork_media_title">🎼 Hsin 音乐通知栏</string>
 
     <!-- Media art -->
     <string name="media_art_title">锁屏歌曲封面</string>
@@ -33,53 +34,52 @@
     <string name="traffic_title">🌐 网速显示</string>
     <string name="network_traffic">🌐 网速显示</string>
     <string name="network_traffic_location">要在什么地方显示网速呢？</string>
-    <string name="traffic_disabled">不用啦~</string>
+    <string name="traffic_disabled">封印中（禁用）</string>
     <string name="traffic_statusbar">状态栏上面！</string>
     <string name="traffic_expanded_statusbar">拉开状态栏后的快捷菜单里！</string>
-    <string name="network_traffic_autohide_threshold_title">低于多少KB/s的时候藏起网速显示呢</string>
+    <string name="network_traffic_autohide_threshold_title">低于多少 KB/s 的时候藏起网速显示呢</string>
     <string name="network_traffic_arrow">用箭头来区分上传与下载~</string>
-    <string name="network_traffic_arrow_summary">箭头？快去请779~！ε=ε=ε=┏(゜ロ゜;)┛</string>
+    <string name="network_traffic_arrow_summary">显示上传与下载的方向指示箭头</string>
     <string name="network_traffic_type">要怎么显示网速呢？</string>
-    <string name="show_network_traffic_combined">合体罢（不区分上传下载）</string>
-    <string name="show_network_traffic_dynamic">有事启奏，无事guna（动态显示）</string>
-    <string name="show_network_traffic_up">只显示上传就够啦OnO</string>
-    <string name="show_network_traffic_down">只显示下载就够啦QvQ
-    </string>
+    <string name="show_network_traffic_combined">双生合流（不区分上传下载）</string>
+    <string name="show_network_traffic_dynamic">有事启奏，无事退下（动态显示）</string>
+    <string name="show_network_traffic_up">只显示上传就够啦</string>
+    <string name="show_network_traffic_down">只显示下载就够啦</string>
     <string name="show_network_traffic_all">我全都要</string>
     <string name="nettraf_font_size">只显示一种网速时的字体大小</string>
 
     <!-- Themes Settings -->
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the settings category for theme overlays. -->
-    <string name="theme_customization_category">🍀 Mikuの图标工厂</string>
+    <string name="theme_customization_category">✦ 玄芳工坊</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
     <string name="theme_customization_font_title">字体</string>
     <string name="theme_customization_font_summary">把字体设置为自己想要的样子吧！</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
     <string name="theme_customization_icon_shape_title">图标形状</string>
-    <string name="theme_customization_icon_shape_summary">把应用图标的形状变成奇奇怪怪的样子（？</string>
+    <string name="theme_customization_icon_shape_summary">自定义桌面应用图标的自适应形状</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the system wide icon pack. -->
     <string name="theme_customization_icon_pack_title">状态栏图标</string>
-    <string name="theme_customization_icon_pack_summary">好耶！是状态栏图标自定义！</string>
+    <string name="theme_customization_icon_pack_summary">自定义状态栏的系统图标样式</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Label for the option that turns off customizations for a given category.-->
-    <string name="theme_customization_device_default">Device default</string>
+    <string name="theme_customization_device_default">设备默认</string>
 
     <!-- Smart Pixels -->
-    <string name="smart_pixels_warning_text">OLED 面板省电是一项实验性功能，通过单独关闭屏幕上的像素来实现省电功能（取决于“省电力度”选项哦）。但是请注意，在某些罕见的情况下，这可能会导致部分区域的触摸不灵敏，还请酌情使用此功能哦~(*￣▽￣*)</string>
-    <string name="smart_pixels_title">📴 Miku 屏幕省电</string>
+    <string name="smart_pixels_warning_text">OLED 面板省电是一项实验性功能，通过单独关闭屏幕上的像素来实现省电（取决于“省电力度”选项）。但在某些罕见情况下，这可能会导致部分区域的触摸不够灵敏，请酌情使用哦~ (✿◡‿◡)</string>
+    <string name="smart_pixels_title">📴 Hsin 屏幕省电</string>
     <string name="smart_pixels_enable_title">启用 OLED 面板省电</string>
     <string name="smart_pixels_enable_summary">关闭屏幕的一部分像素来减少耗电</string>
     <string name="smart_pixels_on_power_save_title">省电模式绑定</string>
     <string name="smart_pixels_on_power_save_summary">在开启省电模式的情况下，自动启用 OLED 面板省电</string>
     <string name="smart_pixels_percent">省电力度</string>
     <string name="smart_pixels_shift_title">烧屏保护</string>
-    <string name="smart_pixels_shift_summary">时不时替换明灭像素来防止屏幕被烧出印子！</string>
+    <string name="smart_pixels_shift_summary">时不时移动明灭像素来防止 OLED 屏幕烧屏</string>
     <string name="smart_pixels_percent_string_12">轻微</string>
     <string name="smart_pixels_percent_string_25">较轻微</string>
     <string name="smart_pixels_percent_string_38">中等</string>
     <string name="smart_pixels_percent_string_50">较高</string>
     <string name="smart_pixels_percent_string_62">高</string>
     <string name="smart_pixels_percent_string_75">极高</string>
-    <string name="smart_pixels_percent_string_88">超级无敌高！（这还能看得清？）</string>
+    <string name="smart_pixels_percent_string_88">超级无敌高（屏幕会明显变暗）</string>
     <string name="custom_timeout_summary_15secs">15 秒</string>
     <string name="custom_timeout_summary_30secs">30 秒</string>
     <string name="custom_timeout_summary_1min">1 分钟</string>
@@ -92,12 +92,12 @@
 
     <!-- Statusbar colorful icons -->
     <string name="statusbar_colored_icons_title">多彩状态栏图标</string>
-    <string name="statusbar_colored_icons_summary">让状态栏变得五彩缤纷！（仅对新显示图标生效哦）</string>
+    <string name="statusbar_colored_icons_summary">让状态栏通知图标使用应用原本的彩色样式（仅对新显示图标生效哦）</string>
 
     <!-- Taskbar Settings -->
-    <string name="task_bar_title">🧩 Miku Home 任务栏设置</string>
-    <string name="task_bar_enable_title">启用 MIku Home 任务栏</string>
-    <string name="task_bar_enable_summary">在任何地方随意切换应用</string>
+    <string name="task_bar_title">🧩 Hsin Home 任务栏设置</string>
+    <string name="task_bar_enable_title">启用 Hsin Home 任务栏</string>
+    <string name="task_bar_enable_summary">在任何地方随时打开和切换应用</string>
     <string name="task_bar_navbar_hint_title">显示小白条</string>
 
 </resources>

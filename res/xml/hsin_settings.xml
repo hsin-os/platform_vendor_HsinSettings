@@ -16,29 +16,29 @@
 <PreferenceScreen 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/miku_settings_title" >
+    android:title="@string/hsin_settings_title" >
 
          <Preference
             android:key="media_notification"
             android:title="@string/artwork_media_title"
-            android:fragment="com.miku.exsettings.fragments.MediaNotification" />
+            android:fragment="com.hsin.exsettings.fragments.MediaNotification" />
 
          <Preference
             android:key="theme_settings"
             android:title="@string/theme_customization_category"
-            android:fragment="com.miku.exsettings.fragments.ThemeSettings" />
+            android:fragment="com.hsin.exsettings.fragments.ThemeSettings" />
 
          <!-- Smart Pixels -->
          <Preference
             android:key="smart_pixels"
             android:title="@string/smart_pixels_title" 
-            android:fragment="com.miku.exsettings.fragments.SmartPixels" />
+            android:fragment="com.hsin.exsettings.fragments.SmartPixels" />
 
         <!-- Miku Home Taskbar -->
         <Preference
-            android:key="miku_taskbar"
+            android:key="hsin_taskbar"
             android:title="@string/task_bar_title"
-            android:fragment="com.miku.exsettings.fragments.TaskbarSettings" />
+            android:fragment="com.hsin.exsettings.fragments.TaskbarSettings" />
 
         <!-- Device Part -->
         <Preference
@@ -51,13 +51,13 @@
                  android:targetClass="org.omnirom.device.DeviceSettings"/>
         </Preference>
 
-        <!-- MUMC -->
+        <!-- HSMC -->
         <Preference
-            android:key="mumc"
+            android:key="hsmc"
             android:persistent="false"
-            android:title="@string/mumc_title">
+            android:title="@string/hsmc_title">
             <intent android:action="android.intent.action.VIEW"
-                 android:targetPackage="com.miku.musiccenter"
-                 android:targetClass="com.miku.musiccenter.MainActivity"/>
+                 android:targetPackage="com.hsin.musiccenter"
+                 android:targetClass="com.hsin.musiccenter.MainActivity"/>
         </Preference>
 </PreferenceScreen>

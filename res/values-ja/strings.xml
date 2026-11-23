@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2021 Miku UI
+     Copyright (C) 2026 Hsin OS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,12 +15,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="miku_settings_title">ミクのシークレットひみつ</string>
-  <string name="miku_settings_summary">夢見ていた ひみつ</string>
+  <string name="hsin_settings_title">✦ 聖域の秘宝</string>
+  <string name="hsin_settings_summary">聖域に秘められた宝物とカスタマイズ</string>
   <string name="device_part_title">デバイスの設定</string>
-  <string name="mumc_title">🎵 Miku UI 音楽センター</string>
+  <string name="hsmc_title">🎵 Hsin OS ミュージックセンター</string>
   <!-- Media notification -->
-  <string name="artwork_media_title">🎼 ミクのメディア通知</string>
+  <string name="artwork_media_title">🎼 Hsin メディア通知</string>
   <string name="artwork_media_background_title">アートワークメディアの背景</string>
   <string name="artwork_media_background_summary">メディアの通知の背景としてアートワークを表示します</string>
   <string name="artwork_media_background_enable_blur_title">メディアアートワーク背景をぼかす</string>
@@ -30,53 +31,53 @@
   <string name="media_art_summary">メディアにカバーアートがある場合は表示をします</string>
   <!-- Statusbar net monitor -->
   <string name="traffic_title">🌐 トラフィックインジケーター</string>
-  <string name="network_traffic">🌐 ネットワークトラック</string>
+  <string name="network_traffic">🌐 ネットワークトラフィック</string>
   <string name="network_traffic_state_title">ネットワークトラフィックを表示</string>
   <string name="network_traffic_location">トラフィックインジケーターはどこに表示しますか？</string>
-  <string name="traffic_disabled">ダメですっ！</string>
+  <string name="traffic_disabled">封印中（無効）</string>
   <string name="traffic_statusbar">ステータスバー</string>
   <string name="traffic_expanded_statusbar">拡張されたヘッダー</string>
   <string name="network_traffic_autohide_threshold_title">ネットアクティビティの自動非表示のしきい値 (KB/s)</string>
   <string name="network_traffic_arrow">矢印を表示</string>
-  <string name="network_traffic_arrow_summary">それは ArrowOS じゃないけど、TH779 はどこにあるの？</string>
-  <string name="network_traffic_type">Miku UI ではどのように表示しますか？</string>
-  <string name="show_network_traffic_combined">ツインズ</string>
-  <string name="show_network_traffic_dynamic">必要なときのみ</string>
+  <string name="network_traffic_arrow_summary">アップロードとダウンロードの方向矢印を表示します</string>
+  <string name="network_traffic_type">Hsin OS ではどのように表示しますか？</string>
+  <string name="show_network_traffic_combined">双身（統合表示）</string>
+  <string name="show_network_traffic_dynamic">通信時のみ</string>
   <string name="show_network_traffic_up">アップロードのみ</string>
   <string name="show_network_traffic_down">ダウンロードのみ</string>
-  <string name="show_network_traffic_all">両方</string>
-  <string name="nettraf_font_size">単一の場合のフォントサイズ</string>
+  <string name="show_network_traffic_all">両方表示</string>
+  <string name="nettraf_font_size">単一表示時のフォントサイズ</string>
   <!-- Themes Settings -->
   <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the settings category for theme overlays. -->
-  <string name="theme_customization_category">🍀 ミクのアイコンファクトリー</string>
+  <string name="theme_customization_category">✦ 玄芳アトリエ</string>
   <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
   <string name="theme_customization_font_title">フォント</string>
   <string name="theme_customization_font_summary">システムフォントのスタイルを自由に設定できます</string>
   <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
   <string name="theme_customization_icon_shape_title">アイコンの形状</string>
-  <string name="theme_customization_icon_shape_summary">アプリアイコンの形状を設定すると見た目がおかしくなるかも (えっ？</string>
+  <string name="theme_customization_icon_shape_summary">ホーム画面のアプリアイコンの形状をカスタマイズします</string>
   <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the system wide icon pack. -->
   <string name="theme_customization_icon_pack_title">アイコンパック</string>
-  <string name="theme_customization_icon_pack_summary">すごい～ ステータスバーにカスタムアイコンを設定します</string>
+  <string name="theme_customization_icon_pack_summary">ステータスバーのカスタムアイコンスタイルを設定します</string>
   <!-- [CHAR_LIMIT=NONE] Developer Settings: Label for the option that turns off customizations for a given category.-->
   <string name="theme_customization_device_default">デバイスのデフォルト</string>
   <!-- Smart Pixels -->
-  <string name="smart_pixels_warning_text">OLED パネルのパワーセーバー機能は試験的な機能です。ピクセルを OFF にする数を多くすると、バッテリーの持ちが改善される可能性があります。しかし、場合によってはタッチの認識が悪くなる事に注意してくださいね～(*￣▽￣*)</string>
-  <string name="smart_pixels_title">📴 ミクのスクリーンパワーセーバー</string>
+  <string name="smart_pixels_warning_text">OLED パネルのパワーセーバーは試験的な機能です。オフにするピクセル数に応じてバッテリー持ちが改善されますが、場合によってはタッチ操作の反応が鈍くなることがあります。</string>
+  <string name="smart_pixels_title">📴 Hsin スクリーンパワーセーバー</string>
   <string name="smart_pixels_enable_title">OLED パネルのパワーセーバーを有効化する</string>
   <string name="smart_pixels_enable_summary">消費電力を抑えるためにピクセルを一部 OFF にします</string>
   <string name="smart_pixels_on_power_save_title">バッテリーセーバーと連動する</string>
-  <string name="smart_pixels_on_power_save_summary">バッテリーセーバーが有効化されている時に、OLED パネルのパワーセーバーを有効化します</string>
+  <string name="smart_pixels_on_power_save_summary">バッテリーセーバーが有効な時に OLED パネルのパワーセーバーを自動で有効化します</string>
   <string name="smart_pixels_percent">省電力レベル</string>
   <string name="smart_pixels_shift_title">焼き付きの保護</string>
-  <string name="smart_pixels_shift_summary">画素をこまめにずらす事で、OLED の焼き付きを防ぎます</string>
+  <string name="smart_pixels_shift_summary">画素をこまめにずらすことで OLED の焼き付きを防ぎます</string>
   <string name="smart_pixels_percent_string_12">非常に少なめ</string>
   <string name="smart_pixels_percent_string_25">少なめ</string>
   <string name="smart_pixels_percent_string_38">普通</string>
   <string name="smart_pixels_percent_string_50">少し高め</string>
   <string name="smart_pixels_percent_string_62">高め</string>
   <string name="smart_pixels_percent_string_75">非常に高め</string>
-  <string name="smart_pixels_percent_string_88">ウルトラハイ！ (マジなの？</string>
+  <string name="smart_pixels_percent_string_88">ウルトラハイ（画面が暗くなります）</string>
   <string name="custom_timeout_summary_15secs">15 秒</string>
   <string name="custom_timeout_summary_30secs">30 秒</string>
   <string name="custom_timeout_summary_1min">1 分</string>
@@ -88,5 +89,5 @@
   <string name="custom_timeout_summary_1hour">1 時間</string>
   <!-- Statusbar colorful icons -->
   <string name="statusbar_colored_icons_title">カラフルなステータスバーアイコン</string>
-  <string name="statusbar_colored_icons_summary">ステータスバーをもっとカラフルにします！ (次に表示されたアイコンにのみ機能します)</string>
+  <string name="statusbar_colored_icons_summary">ステータスバーの通知アイコンにアプリ本来のアクセントカラーを使用します（次に表示されるアイコンから適用）</string>
 </resources>

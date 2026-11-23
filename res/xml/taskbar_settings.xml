@@ -16,13 +16,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/task_bar_title" >
 
-    <com.miku.settings.preferences.SystemSettingSwitchPreference
+    <com.hsin.settings.preferences.SystemSettingSwitchPreference
         android:key="task_bar_enable"
         android:title="@string/task_bar_enable_title"
         android:summary="@string/task_bar_enable_summary"
         android:defaultValue="true" />
 
-    <com.miku.settings.preferences.SystemSettingSwitchPreference
+    <com.hsin.settings.preferences.SystemSettingSwitchPreference
         android:key="navigation_bar_hint"
         android:title="@string/task_bar_navbar_hint_title"
         android:defaultValue="true" />

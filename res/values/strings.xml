@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2021 Miku UI
+     Copyright (C) 2026 Hsin OS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,17 +17,17 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="miku_settings_title">Miku no Secret Stuff</string>
-    <string name="miku_settings_summary">The Secret I have always dreamed of</string>
+    <!-- Main Settings & Hubs -->
+    <string name="hsin_settings_title">✦ Sanctum Secrets</string>
+    <string name="hsin_settings_summary">Treasures & customization guarded within the Sanctum</string>
     <string name="device_part_title">Device Settings</string>
-
-    <string name="mumc_title">🎵 Miku UI Music Center</string>
+    <string name="hsmc_title">🎵 Hsin OS Music Center</string>
 
     <!-- Media notification -->
-    <string name="artwork_media_title">🎼 Miku Media notification</string>
+    <string name="artwork_media_title">🎼 Hsin Media notification</string>
     <string name="artwork_media_background_title">Artwork media background</string>
     <string name="artwork_media_background_summary">Set media artwork as the notification media background</string>
-    <string name="artwork_media_background_enable_blur_title">Blur media media artwork background</string>
+    <string name="artwork_media_background_enable_blur_title">Blur media artwork background</string>
     <string name="artwork_media_background_blur_radius_title">Blur amount for media artwork</string>
     <string name="artwork_media_background_alpha_title">Transparency of media artwork</string>
 
@@ -38,39 +39,34 @@
     <string name="traffic_title">🌐 Traffic Indicators</string>
     <string name="network_traffic">🌐 Network traffic</string>
     <string name="network_traffic_state_title">Network traffic display</string>
-    <string name="network_traffic_location">Where should we show the Traffic Indicator?</string>
-    <string name="traffic_disabled">Damedesu!</string>
+    <string name="network_traffic_location">Where should the Traffic Indicator appear?</string>
+    <string name="traffic_disabled">Sealed (Disabled)</string>
     <string name="traffic_statusbar">Statusbar</string>
     <string name="traffic_expanded_statusbar">Expanded header</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
     <string name="network_traffic_arrow">Show arrows</string>
-    <string name="network_traffic_arrow_summary">That\'s not ArrowOS, but hey, where is TH779?</string>
-    <string name="network_traffic_type">How Miku UI shows it?</string>
-    <string name="show_network_traffic_combined">Twins</string>
-    <string name="show_network_traffic_dynamic">Only on necessary</string>
-    <string name="show_network_traffic_up">Upload is enough</string>
-    <string name="show_network_traffic_down">Download is enough</string>
-    <string name="show_network_traffic_all">I want both</string>
+    <string name="network_traffic_arrow_summary">Display directional upload and download flow arrows</string>
+    <string name="network_traffic_type">How should Hsin OS display it?</string>
+    <string name="show_network_traffic_combined">Dual Form (Combined)</string>
+    <string name="show_network_traffic_dynamic">Only when active</string>
+    <string name="show_network_traffic_up">Upload only</string>
+    <string name="show_network_traffic_down">Download only</string>
+    <string name="show_network_traffic_all">Show both</string>
     <string name="nettraf_font_size">Font size when there\'s only single net</string>
 
     <!-- Themes Settings -->
-    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the settings category for theme overlays. -->
-    <string name="theme_customization_category">🍀 Miku no Icon Factory</string>
-    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
+    <string name="theme_customization_category">✦ Xuanfang Atelier</string>
     <string name="theme_customization_font_title">Fonts</string>
     <string name="theme_customization_font_summary">Set system font style as you like</string>
-    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
     <string name="theme_customization_icon_shape_title">Icon shape</string>
-    <string name="theme_customization_icon_shape_summary">Set Apps Icon shape style that make it looks weird(what?</string>
-    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the system wide icon pack. -->
+    <string name="theme_customization_icon_shape_summary">Customize adaptive app icon shapes across your launcher</string>
     <string name="theme_customization_icon_pack_title">Icon pack</string>
-    <string name="theme_customization_icon_pack_summary">Great~ Set custom icon for StatusBar</string>
-    <!-- [CHAR_LIMIT=NONE] Developer Settings: Label for the option that turns off customizations for a given category.-->
+    <string name="theme_customization_icon_pack_summary">Set custom icon style for the Status Bar</string>
     <string name="theme_customization_device_default">Device default</string>
 
     <!-- Smart Pixels -->
     <string name="smart_pixels_warning_text">OLED Panel Power Saver is an experimental feature. Depending on how many pixels you decide to turn off, you could see improvement in battery life. Note that in some cases it can result in unresponsive areas on touch screen</string>
-    <string name="smart_pixels_title">📴 Miku Screen Power Saver</string>
+    <string name="smart_pixels_title">📴 Hsin Screen Power Saver</string>
     <string name="smart_pixels_enable_title">Enable OLED Panel Power Saver</string>
     <string name="smart_pixels_enable_summary">Shut off pixels to reduce power consumption</string>
     <string name="smart_pixels_on_power_save_title">Battery saver binding</string>
@@ -84,7 +80,9 @@
     <string name="smart_pixels_percent_string_50">Quite</string>
     <string name="smart_pixels_percent_string_62">High</string>
     <string name="smart_pixels_percent_string_75">Very High</string>
-    <string name="smart_pixels_percent_string_88">Ultra High!(R u sure u can see?)</string>
+    <string name="smart_pixels_percent_string_88">Ultra High (Dimmer display)</string>
+
+    <!-- Timeouts -->
     <string name="custom_timeout_summary_15secs">15 seconds</string>
     <string name="custom_timeout_summary_30secs">30 seconds</string>
     <string name="custom_timeout_summary_1min">1 minute</string>
@@ -97,11 +95,12 @@
 
     <!-- Statusbar colorful icons -->
     <string name="statusbar_colored_icons_title">Colorful Statusbar Icons</string>
-    <string name="statusbar_colored_icons_summary">Make your Statusbar more Colorful!(It only works on the next icon displayed.)</string>
+    <string name="statusbar_colored_icons_summary">Use original app accent colors for Status Bar notification icons</string>
 
     <!-- Taskbar Settings -->
-    <string name="task_bar_title">🧩 Miku Home Taskbar Settings</string>
-    <string name="task_bar_enable_title">Enable Miku Home Taskbar</string>
-    <string name="task_bar_enable_summary">For opening and switching apps anywhere</string>
+    <string name="task_bar_title">🧩 Hsin Home Taskbar Settings</string>
+    <string name="task_bar_enable_title">Enable Hsin Home Taskbar</string>
+    <string name="task_bar_enable_summary">Quickly open and switch apps from anywhere</string>
     <string name="task_bar_navbar_hint_title">Show Gesture bar</string>
+
 </resources>

@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.miku.exsettings.fragments;
+package com.hsin.exsettings.fragments;
 
-import static com.android.internal.util.miku.ThemeUtils.ICON_SHAPE_KEY;
+import static android.os.UserHandle.USER_SYSTEM;
+import static com.android.internal.util.miku.ThemeUtils.FONT_KEY;
 
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
@@ -44,7 +44,6 @@ import android.view.ViewGroup.LayoutParams;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
@@ -59,7 +58,6 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settingslib.Utils;
 
 import com.bumptech.glide.Glide;
 
@@ -73,19 +71,18 @@ import java.util.Arrays;
 import org.json.JSONObject;
 import org.json.JSONException;
 
-public class IconShapes extends SettingsPreferenceFragment {
+public class FontsPicker extends SettingsPreferenceFragment {
 
     private RecyclerView mRecyclerView;
     private ThemeUtils mThemeUtils;
-
-    private String mCategory = ICON_SHAPE_KEY;
+    private String mCategory = FONT_KEY;
 
     private List<String> mPkgs;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle(R.string.theme_customization_icon_shape_title);
+        getActivity().setTitle(R.string.theme_customization_font_title);
 
         mThemeUtils = new ThemeUtils(getActivity());
         mPkgs = mThemeUtils.getOverlayPackagesForCategory(mCategory, "android");
@@ -99,7 +96,7 @@ public class IconShapes extends SettingsPreferenceFragment {
                 R.layout.item_view, container, false);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 3);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         Adapter mAdapter = new Adapter(getActivity());
         mRecyclerView.setAdapter(mAdapter);
@@ -128,7 +125,7 @@ public class IconShapes extends SettingsPreferenceFragment {
 
         @Override
         public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_option, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.fonts_option, parent, false);
             CustomViewHolder vh = new CustomViewHolder(v);
             return vh;
         }
@@ -136,8 +133,7 @@ public class IconShapes extends SettingsPreferenceFragment {
         @Override
         public void onBindViewHolder(CustomViewHolder holder, final int position) {
             String pkg = mPkgs.get(position);
-
-            holder.image.setBackgroundDrawable(mThemeUtils.createShapeDrawable(pkg));
+            String label = getLabel(holder.itemView.getContext(), pkg);
 
             String currentPackageName = mThemeUtils.getOverlayInfos(mCategory).stream()
                 .filter(info -> info.isEnabled())
@@ -145,18 +141,25 @@ public class IconShapes extends SettingsPreferenceFragment {
                 .findFirst()
                 .orElse("android");
 
-            holder.name.setText("android".equals(pkg) ? "Default" : getLabel(holder.name.getContext(), pkg));
+            holder.title.setText("android".equals(pkg) ? "Default" : label);
+            holder.title.setTextSize(20);
+            holder.title.setTypeface(getTypeface(holder.title.getContext(), pkg));
+            holder.name.setVisibility(View.GONE);
 
-            final boolean isDefault = "android".equals(currentPackageName) && "android".equals(pkg);
-            final int color = ColorUtils.setAlphaComponent(
-                     Utils.getColorAttrDefaultColor(getContext(), android.R.attr.colorAccent),
-                     pkg.equals(currentPackageName) || isDefault ? 170 : 75);
-            holder.image.setBackgroundTintList(ColorStateList.valueOf(color));
+            if (currentPackageName.equals(pkg)) {
+                mAppliedPkg = pkg;
+                if (mSelectedPkg == null) {
+                    mSelectedPkg = pkg;
+                }
+            }
 
-            holder.itemView.findViewById(R.id.option_tile).setBackgroundDrawable(null);
+            holder.itemView.setActivated(pkg == mSelectedPkg);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    updateActivatedStatus(mSelectedPkg, false);
+                    updateActivatedStatus(pkg, true);
+                    mSelectedPkg = pkg;
                     enableOverlays(position);
                 }
             });
@@ -169,21 +172,34 @@ public class IconShapes extends SettingsPreferenceFragment {
 
         public class CustomViewHolder extends RecyclerView.ViewHolder {
             TextView name;
-            ImageView image;
+            TextView title;
             public CustomViewHolder(View itemView) {
                 super(itemView);
+                title = (TextView) itemView.findViewById(R.id.option_title);
                 name = (TextView) itemView.findViewById(R.id.option_label);
-                image = (ImageView) itemView.findViewById(R.id.option_thumbnail);
+            }
+        }
+
+        private void updateActivatedStatus(String pkg, boolean isActivated) {
+            int index = mPkgs.indexOf(pkg);
+            if (index < 0) {
+                return;
+            }
+            RecyclerView.ViewHolder holder = mRecyclerView.findViewHolderForAdapterPosition(index);
+            if (holder != null && holder.itemView != null) {
+                holder.itemView.setActivated(isActivated);
             }
         }
     }
 
-    public Drawable getDrawable(Context context, String pkg, String drawableName) {
+    public Typeface getTypeface(Context context, String pkg) {
         try {
             PackageManager pm = context.getPackageManager();
             Resources res = pkg.equals("android") ? Resources.getSystem()
                     : pm.getResourcesForApplication(pkg);
-            return res.getDrawable(res.getIdentifier(drawableName, "drawable", pkg));
+            return Typeface.create(res.getString(
+                    res.getIdentifier("config_bodyFontFamily",
+                    "string", pkg)), Typeface.NORMAL);
         }
         catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.miku.exsettings;
+package com.hsin.exsettings;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -26,7 +26,7 @@ import android.os.Bundle;
 import android.view.Surface;
 import android.preference.Preference;
 import com.android.settings.R;
-import com.miku.settings.preferences.Utils;
+import com.hsin.settings.preferences.Utils;
 
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -37,10 +37,10 @@ public class MikuSettings extends SettingsPreferenceFragment {
         super.onCreate(icicle);
         final String KEY_DEVICE_PART = "device_part";
         final String KEY_DEVICE_PART_PACKAGE_NAME = "org.omnirom.device";
-        final String KEY_MUMC = "mumc";
-        final String KEY_MUMC_PACKAGE_NAME = "com.miku.musiccenter";
+        final String KEY_MUMC = "hsmc";
+        final String KEY_MUMC_PACKAGE_NAME = "com.hsin.musiccenter";
 
-        addPreferencesFromResource(R.xml.miku_settings);
+        addPreferencesFromResource(R.xml.hsin_settings);
 
         // DeviceParts
         if (!Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {

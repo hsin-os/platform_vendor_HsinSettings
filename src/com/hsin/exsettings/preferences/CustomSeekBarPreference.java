@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.miku.exsettings.preferences;
+package com.hsin.exsettings.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;

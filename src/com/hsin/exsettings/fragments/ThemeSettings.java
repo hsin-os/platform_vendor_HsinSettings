@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.miku.exsettings.fragments;
+package com.hsin.exsettings.fragments;
 
 import android.content.Context;
 import android.content.ContentResolver;

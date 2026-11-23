@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 Miku UI
+ * Copyright (C) 2021-2025 Miku UI
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,55 +14,40 @@
  * limitations under the License.
  */
 
-package com.miku.exsettings.fragments;
+package com.hsin.exsettings.fragments;
 
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
-import androidx.preference.SwitchPreference;
+import android.os.Handler;
+import android.os.UserHandle;
+import android.provider.Settings;
+
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import androidx.preference.SwitchPreference;
 
-import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
-
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
-public class MediaNotification extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class TaskbarSettings extends SettingsPreferenceFragment {
+
+    private static final String TAG = "TaskbarSettings";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.media_notification);
-        ContentResolver resolver = getActivity().getContentResolver();
-        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        addPreferencesFromResource(R.xml.taskbar_settings);
     }
 
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.MIKU;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
     }
 }

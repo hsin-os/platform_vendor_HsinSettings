@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.miku.exsettings.utils;
+package com.hsin.exsettings.utils;
 
 import static android.os.UserHandle.USER_SYSTEM;
 

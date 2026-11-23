@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017 AOSPEXTENDED PROJECT
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,25 +14,38 @@
  * limitations under the License.
  */
 
-package com.miku.exsettings.preferences;
+package com.hsin.exsettings.preferences;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
-public class CustomSecureSeekBarPreference extends CustomSeekBarPreference {
+public class SecureSettingSeekBarPreference extends CustomSeekBarPreference {
 
-    public CustomSecureSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SecureSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
+    }
+
+    public SecureSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public CustomSecureSeekBarPreference(Context context, AttributeSet attrs) {
+    public SecureSettingSeekBarPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public CustomSecureSeekBarPreference(Context context) {
+    public SecureSettingSeekBarPreference(Context context) {
         super(context, null);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
+
+    @Override
+    protected Object onGetDefaultValue(TypedArray ta, int index) {
+        return super.onGetDefaultValue(ta, index);
+    }
 }
+
+

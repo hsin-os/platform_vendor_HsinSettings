@@ -18,7 +18,7 @@
 package com.hsin.exsettings.fragments;
 
 import static android.os.UserHandle.USER_SYSTEM;
-import static com.android.internal.util.miku.ThemeUtils.FONT_KEY;
+import static com.android.internal.util.hsin.ThemeUtils.FONT_KEY;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -62,7 +62,7 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.bumptech.glide.Glide;
 
-import com.android.internal.util.miku.ThemeUtils;
+import com.android.internal.util.hsin.ThemeUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;

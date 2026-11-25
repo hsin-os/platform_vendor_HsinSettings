@@ -17,7 +17,7 @@
 
 package com.hsin.exsettings.fragments;
 
-import static com.android.internal.util.miku.ThemeUtils.ICON_SHAPE_KEY;
+import static com.android.internal.util.hsin.ThemeUtils.ICON_SHAPE_KEY;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -64,7 +64,7 @@ import com.android.settingslib.Utils;
 
 import com.bumptech.glide.Glide;
 
-import com.android.internal.util.miku.ThemeUtils;
+import com.android.internal.util.hsin.ThemeUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;

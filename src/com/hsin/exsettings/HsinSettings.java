@@ -1,7 +1,6 @@
 /*
  * Copyright (C) 2016 The Pure Nexus Project
  * Copyright (C) 2026 Hsin OS
- * used for Miku UI
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +24,6 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Surface;
-import android.preference.Preference;
 import com.android.settings.R;
 import com.hsin.settings.preferences.Utils;
 
@@ -38,18 +36,12 @@ public class HsinSettings extends SettingsPreferenceFragment {
         super.onCreate(icicle);
         final String KEY_DEVICE_PART = "device_part";
         final String KEY_DEVICE_PART_PACKAGE_NAME = "org.omnirom.device";
-        final String KEY_MUMC = "hsmc";
-        final String KEY_MUMC_PACKAGE_NAME = "com.hsin.musiccenter";
 
         addPreferencesFromResource(R.xml.hsin_settings);
 
         // DeviceParts
         if (!Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
             getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
-        }
-        // MUMC Settings
-        if (!Utils.isPackageInstalled(getActivity(), KEY_MUMC_PACKAGE_NAME)) {
-            getPreferenceScreen().removePreference(findPreference(KEY_MUMC));
         }
     }
 

@@ -51,14 +51,4 @@
                  android:targetPackage="org.omnirom.device"
                  android:targetClass="org.omnirom.device.DeviceSettings"/>
         </Preference>
-
-        <!-- HSMC -->
-        <Preference
-            android:key="hsmc"
-            android:persistent="false"
-            android:title="@string/hsmc_title">
-            <intent android:action="android.intent.action.VIEW"
-                 android:targetPackage="com.hsin.musiccenter"
-                 android:targetClass="com.hsin.musiccenter.MainActivity"/>
-        </Preference>
 </PreferenceScreen>

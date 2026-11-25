@@ -27,7 +27,7 @@ import android.os.Bundle;
 import android.view.Surface;
 import android.preference.Preference;
 import com.android.settings.R;
-import com.miku.settings.preferences.Utils;
+import com.hsin.settings.preferences.Utils;
 
 import com.android.settings.SettingsPreferenceFragment;
 

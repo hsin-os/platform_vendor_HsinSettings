@@ -18,7 +18,7 @@
     android:key="media_notification"
     android:title="@string/theme_customization_category">
 
-        <com.miku.settings.preferences.SystemSettingSwitchPreference
+        <com.hsin.settings.preferences.SystemSettingSwitchPreference
              android:key="statusbar_colored_icons"
              android:title="@string/statusbar_colored_icons_title"
              android:summary="@string/statusbar_colored_icons_summary"

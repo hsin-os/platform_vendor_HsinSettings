@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2021 AospExtended ROM Project
+ * Copyright (C) 2026 Hsin OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -106,7 +107,7 @@ public class FontsPicker extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.MIKU;
+        return MetricsEvent.HSIN;
     }
 
     @Override

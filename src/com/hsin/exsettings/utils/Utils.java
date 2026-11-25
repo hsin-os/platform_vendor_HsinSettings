@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The Pure Nexus Project
+ * Copyright (C) 2026 Hsin OS
  * used for Cherish OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The Pure Nexus Project
+ * Copyright (C) 2026 Hsin OS
  * used for Miku UI
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,11 +27,11 @@ import android.os.Bundle;
 import android.view.Surface;
 import android.preference.Preference;
 import com.android.settings.R;
-import com.hsin.settings.preferences.Utils;
+import com.miku.settings.preferences.Utils;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class MikuSettings extends SettingsPreferenceFragment {
+public class HsinSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -54,7 +55,7 @@ public class MikuSettings extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.MIKU;
+        return MetricsProto.MetricsEvent.HSIN;
     }
 
     public static void lockCurrentOrientation(Activity activity) {

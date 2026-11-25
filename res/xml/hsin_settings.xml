@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2021 Miku UI
+     Copyright (C) 2026 Hsin OS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -34,7 +35,7 @@
             android:title="@string/smart_pixels_title" 
             android:fragment="com.hsin.exsettings.fragments.SmartPixels" />
 
-        <!-- Miku Home Taskbar -->
+        <!-- Hsin Home Taskbar -->
         <Preference
             android:key="hsin_taskbar"
             android:title="@string/task_bar_title"

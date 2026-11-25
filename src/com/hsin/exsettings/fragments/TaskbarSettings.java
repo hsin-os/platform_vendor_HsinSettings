@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2021-2025 Miku UI
+ * Copyright (C) 2026 Hsin OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,6 +49,6 @@ public class TaskbarSettings extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.MIKU;
+        return MetricsProto.MetricsEvent.HSIN;
     }
 }
